@@ -9,6 +9,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     allParagraphs.forEach(function(paragraph, index) {
         console.log(index, paragraph);
-        paragraph.classList.add('bold');
+        
+        const spanElement = document.createElement('span');
+        spanElement.innerText = `This paragraph is at index ${index}.`;
+        spanElement.classList.add('bold');
+        paragraph.append(spanElement);
+        
     })
 });
